@@ -50,8 +50,9 @@ render(){
   return (
   <div>
     <button onClick={()=> this.addTodo() }>Add TODO</button>
-    <div>Total {this.state.todos.length}</div>
+    <div>Total: {this.state.todos.length}</div>
     <div>Completed: {this.state.todos.filter(todo=>todo.checked).length}</div>
+    <div>Uncompleted: {this.state.todos.filter(todo=>todo.checked===false).length}</div>
     <ul>
       {this.state.todos.map(todo => (
       <Todo 
